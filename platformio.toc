@@ -1,0 +1,6 @@
+\contentsline {section}{\numberline {I}Question}{1}{}%
+\contentsline {section}{\numberline {II}Solution}{1}{}%
+\contentsline {section}{\numberline {III}Truth Table}{2}{}%
+\contentsline {section}{\numberline {IV}Logical Diagram}{2}{}%
+\contentsline {section}{\numberline {V}Components}{2}{}%
+\contentsline {section}{\numberline {VI}Implementation}{3}{}%
