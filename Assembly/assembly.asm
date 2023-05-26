@@ -62,27 +62,27 @@ start:
   ldi r27, 0x00
   ldi r28, 0x00
 
+
   ; POS expression
-  ; F = b0'a1 + a0a1b0' + a0a1b0'
+  ; F = a1b1' + a0a1b0' + a0b1'b0'
 
   mov r22, r18 ; r22 = a0
   mov r23, r19 ; r23 = a1
   mov r24, r20 ; r24 = b0
   mov r26, r21 ; r26 = b1
   com r26
-  and r23, r26 ; r23 = a1b1'
   com r24
-  and r24, r23 ; r24 = b0'a1 //
-  and r22, r24 ; r22 = a0a1b0' //
-  mov r27, r26 ; r27 = b1'
-  mov r28, r24 ; r28 = b0'
-  and r27, r28 ; r27 = b0'b1'
-  and r27, r22 ; r27 = a0a1b0' //
+  
+  and r23, r26  ;r23 = a1b1'
+  and r22, r19  ;r22 = a0a1 
+  mov r27, r22
+  and r27, r24  ;r27 = a0a1b0' 
+  and r24, r26  ;r24 = b0'b1'
+  mov r28, r24
+  and r28, r18  ;r28 = a0b0'b1'
+  or r27, r23
+  or r27, r28
 
-  or r24, r22
-  or r24, r27
-
-  out PORTB, r24
+  out PORTB, r27
 
   rjmp start
-
