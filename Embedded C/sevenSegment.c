@@ -9,7 +9,8 @@ int main (void)
 
   while (1) {
 
-    PORTB = ((1 <<  PB0));    //turn PB0 off (pin 8)
+    PORTB = ((1 <<  PB0));    //turn PB0 off (pin 8) 
+	  		      //(1 << PB0) shifts the value 1 to the left by the number of bits specified by PB0, which is 0 (it sets the first bit of PORTB to 1)
 
     // PD2 corresponds to digital pin 2
     // PD3 corresponds to digital pin 3
