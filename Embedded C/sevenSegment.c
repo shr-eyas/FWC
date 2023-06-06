@@ -4,7 +4,8 @@ int main (void)
 {
 	
   DDRD |= 0xFC;               //set PD2-PD7 as output pins 0xFC=0b11111100 (binary)
-  DDRB |= ((1 << DDB0));      //set PB0 as output pin
+  DDRB |= ((1 << DDB0));      //set PB0 as output pin (1 << DDB0) (shifts the value 1 to the left by the number of bits specified by DDB0, which is 0 in this case)
+	                      //it sets the first bit of DDRB to 1 using the |= operator
 
   while (1) {
 
