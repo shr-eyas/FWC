@@ -1,3 +1,4 @@
+#include<Arduino.h>
 boolean Z, Y, X, W, a, b, c, d, e, f, g, A, B, C, D;
 void setup () {
 pinMode(2, OUTPUT);
